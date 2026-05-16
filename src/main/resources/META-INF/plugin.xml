@@ -1,0 +1,21 @@
+<idea-plugin version="2">
+  <id>com.example.indentationchecker</id>
+  <name>Indentation Checker</name>
+  <vendor email="support@example.com" url="https://example.com">Example</vendor>
+  <version>0.4.0</version>
+  <description>
+    Auto checks indentation across all languages, highlights inconsistent leading whitespace in open files, and offers in-editor quick fixes to normalize indentation.
+  </description>
+  <depends>com.intellij.modules.lang</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <localInspection language="ANY"
+                     implementationClass="com.example.indentationchecker.IndentationInspection"
+                     displayName="Indentation Checker"
+                     groupName="Code Style"
+                     shortName="IndentationChecker"
+                     enabledByDefault="true"/>
+    <annotator language="ANY"
+               implementationClass="com.example.indentationchecker.IndentationColorAnnotator"/>
+  </extensions>
+</idea-plugin>
